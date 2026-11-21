@@ -25,6 +25,8 @@ public class Perseguidor : MonoBehaviour
     private float tiempoAturdido = 0f;
     private bool oportunidadUsada = false;
 
+    public string escenaDerrota = "Derrota";
+
     void Start()
     {
         posicionSuelo = transform.position;
@@ -144,7 +146,7 @@ public class Perseguidor : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene(escenaDerrota);
             }
         }
     }

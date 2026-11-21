@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class PruebaHabilidad : MonoBehaviour
 {
+    public string escenaDerrota = "Derrota";
+    
     [Header("Elementos de la UI")]
     public GameObject panelPrueba;      // El panel completo de la prueba
     public RectTransform barraFondo;    // La barra oscura de fondo
@@ -99,6 +101,6 @@ public class PruebaHabilidad : MonoBehaviour
     {
         pruebaActiva = false;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(escenaDerrota);
     }
 }
